@@ -1,5 +1,6 @@
-@if(recentMovies && recentMovies.length) {
-    <div class="recently-visited-movies">
+
+<div class="recently-visited-movies">
+    @if(recentMovies && recentMovies.length) {
         <span class="last-visited mat-h3">{{labels.lastVisitedLabel}}</span> 
         <mat-chip-set>
             @for(recentMovie of recentMovies; track $index) {
@@ -9,5 +10,6 @@
                 </mat-chip>
             }
         </mat-chip-set>
-    </div>
-}
+    }
+</div>
+
