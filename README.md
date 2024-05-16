@@ -134,6 +134,14 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `npm run lint` to lint the project. This will lint both `ts` and `scss` files.
 
+### End-to-End Testing
+
+Run `npm run e2e` to run end to end tests and generate report using playwright using headless browser
+
+(or)
+
+Run `npm run e2e:headed` to run end to end tests on visible browser using playwright
+
 
 ## Further help
 
