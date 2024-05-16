@@ -138,3 +138,6 @@ Run `npm run lint` to lint the project. This will lint both `ts` and `scss` file
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+![image](https://github.com/naren4029/innovio/assets/36468188/dab1c6ed-60ee-444e-a0fa-a92c52f11ec6)
+
