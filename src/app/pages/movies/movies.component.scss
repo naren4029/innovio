@@ -1,0 +1,26 @@
+@use '../home/home.component.scss';
+@import '../../../assets/styles/colors';
+
+.filter-panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+::ng-deep .clear-all {
+    .mat-pseudo-checkbox {
+		display: none;
+	}
+
+    span {
+        margin-left: -6px;
+    }
+
+    &:hover{
+        color: $accent;
+        
+        /* stylelint-disable-next-line selector-class-pattern */
+        .mdc-list-item__primary-text {
+            color: $accent;
+        }
+    }
+}

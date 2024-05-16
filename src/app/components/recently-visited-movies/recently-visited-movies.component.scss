@@ -1,0 +1,26 @@
+@import '../../../assets/styles/colors';
+
+.recently-visited-movies {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 40px;
+    background-color: $app-background;
+    z-index: 1000;
+    overflow: auto;
+    overflow-x: hidden;
+
+    .last-visited{
+        margin: 0 8px;
+        line-height: 40px;
+    }
+
+}
+
+@media screen and (width <= 400px){
+    .recently-visited-movies {
+        justify-content: start;
+    }
+}

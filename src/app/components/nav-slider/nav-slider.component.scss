@@ -1,0 +1,25 @@
+@import '../../../assets/styles/colors';
+
+.drawer-container {
+    height: 88%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    background-color: $header-background;
+    color: $white;
+    display: flex;
+    overflow: hidden;
+    margin-top: 3px;
+    border-radius: 3px;
+
+    .drawer-sidenav {
+        border: none;    
+        width: 15rem;
+    }
+    
+    .drawer-content {
+        background-color: $app-background;
+        width: 100%;
+    }
+}

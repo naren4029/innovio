@@ -1,0 +1,34 @@
+@if (selectedMovie) {
+<div  class="movie-container">
+    
+	<img mat-card-image class="img-container" src={{selectedMovie.image?.url}} />
+
+	<div class="movie-details">
+		<mat-label class="title">{{ selectedMovie.title }}</mat-label>
+        
+		<mat-label>
+            <mat-icon>join_inner</mat-icon>
+            <span class="align-icon-text">
+                <span class="detail-tag">Genres: </span>
+                {{ selectedMovie.genres?.join(", ") }}
+            </span>
+		</mat-label>
+
+		<mat-label>
+            <mat-icon>favorite_border</mat-icon>
+            <span class="align-icon-text">
+                <span class="detail-tag">Popularity: </span>
+                {{ roundDecimalPlaces(selectedMovie.popularity)  }} 
+            </span>
+		</mat-label>
+
+		<mat-label>
+            <mat-icon>euro</mat-icon>
+            <span class="align-icon-text">
+                <span class="detail-tag">Budget: </span>
+                {{ formatCurrencyValue(selectedMovie.budget)}}
+            </span>
+		</mat-label>
+	</div>
+</div>
+}

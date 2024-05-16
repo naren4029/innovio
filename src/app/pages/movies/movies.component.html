@@ -1,0 +1,65 @@
+<ng-container>
+    <h1>
+        <mat-icon>movie_filter</mat-icon>
+        <span class="align-text">{{labels.title}}</span>
+    </h1>
+
+    <div class="filter-panel">
+        <mat-form-field class="search-input">
+            <input
+                matInput
+                type="text"
+                placeholder={{labels.searchText}}
+                [ngModel]="searchTerm"
+                (input)="onTitleSearchInput($event)"
+            />
+
+            <button
+                matSuffix
+                mat-icon-button
+                (click)="onInputResetClick()">
+                @if(searchTerm) {
+                    <mat-icon>close</mat-icon>
+                } @else {
+                    <mat-icon>search</mat-icon>
+                }
+            </button>
+        </mat-form-field>
+
+        <mat-form-field class="genres-select">
+            <mat-select
+                multiple
+                placeholder={{labels.selectText}}
+                [value]="selectedGenres"
+                (selectionChange)="onGenreToggle($event)">
+                @if(selectedGenres.length) {
+                    <mat-option class="clear-all" [value]="null">
+                        <mat-icon>cancel_presentation_icon</mat-icon>
+                        {{labels.clearText}}
+                    </mat-option>
+                }
+                @for(option of genreOptions; track $index) {
+                    <mat-option [value]="option">
+                        {{ option }}
+                    </mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <app-movie-list (selectedMovie)="onMovieSelect($event)" 
+        [labels]="movieLabels" 
+        [movies]="filteredMovies"
+        [startIndex]="startIndex"
+        [endIndex]="endIndex">
+    </app-movie-list>
+
+    <mat-paginator
+        class="paginator"
+        [length]="filteredMovies.length"
+        [pageSize]="pageSize"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [pageSizeOptions]="[5, 10, 25, 50]"
+        (page)="handlePageEvent($event)">
+    </mat-paginator>
+</ng-container>

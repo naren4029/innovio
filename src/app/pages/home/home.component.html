@@ -1,0 +1,22 @@
+<ng-container>
+    <h1>
+        <mat-icon>star_outline</mat-icon>
+        <span class="align-text">{{labels.title}}</span>
+    </h1>
+
+    <app-movie-list (selectedMovie)="onMovieSelect($event)" 
+    [labels]="movieLabels" 
+    [movies]="listOfTopMovies"
+    [startIndex]="startIndex"
+    [endIndex]="endIndex"></app-movie-list>
+
+    <mat-paginator
+    class="paginator"
+	[length]="listOfTopMovies.length"
+	[pageSize]="pageSize"
+    [showFirstLastButtons]="showFirstLastButtons"
+	[pageSizeOptions]="[5, 10]"
+	(page)="handlePageEvent($event)">
+    </mat-paginator>
+    
+</ng-container>

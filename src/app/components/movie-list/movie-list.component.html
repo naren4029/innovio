@@ -1,0 +1,29 @@
+<div class="movie-list-container">
+	@for(movie of movies  | slice: startIndex : endIndex; track $index) {
+		<mat-card (click)="selectedMovie.emit(movie)">
+			<img class="movie-image" mat-card-image [src]="movie?.image?.url" />
+            <div class="view-overlay">
+                <div class="view-icon">
+                    <mat-icon>visibility</mat-icon>
+                </div>
+                {{labels.hoverText}}
+            </div>
+            <div class="card-text-content">
+                <mat-card-header>
+                    <mat-card-title>{{ movie.title }}</mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p>
+                        <mat-icon>favorite_border</mat-icon>
+                        <span class="align-icon-text">{{labels.popularity}}: {{ roundDecimalPlaces(movie.popularity) }}</span>
+                    </p>
+                    <p>
+                        <mat-icon>access_time</mat-icon>
+                        <span class="align-icon-text">{{labels.runtime}}: {{ movie.runtime }}</span>
+                    </p>
+                </mat-card-content>
+            </div>
+		</mat-card>
+    }
+</div>

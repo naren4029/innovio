@@ -1,0 +1,13 @@
+@if(recentMovies && recentMovies.length) {
+    <div class="recently-visited-movies">
+        <span class="last-visited mat-h3">{{labels.lastVisitedLabel}}</span> 
+        <mat-chip-set>
+            @for(recentMovie of recentMovies; track $index) {
+                <mat-chip (click)="selectMovie(recentMovie)">
+                    <img matChipAvatar src={{recentMovie?.image?.url}} />
+                    {{ recentMovie?.title }}
+                </mat-chip>
+            }
+        </mat-chip-set>
+    </div>
+}

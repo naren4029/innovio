@@ -1,0 +1,8 @@
+<mat-nav-list class="nav-list">
+    @for (item of navList; track $index) {
+        <a class="nav-link" mat-list-item routerLink={{item.navLink}} routerLinkActive="nav-active" [activated]="item.navLink === currentRoute" >
+            <mat-icon>{{item.icon}}</mat-icon>
+            <span class="align-icon-text">{{item.label}}</span>
+        </a>
+    }
+</mat-nav-list>

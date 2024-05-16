@@ -1,0 +1,19 @@
+@import '../../../assets/styles/colors';
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: $header-background;
+    color: $white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px $light-grey;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin: 0 0.5rem;
+}

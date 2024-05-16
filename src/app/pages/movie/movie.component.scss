@@ -1,0 +1,37 @@
+@import "../../../assets/styles/colors";
+
+.movie-container {
+    display: flex  ;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    padding: 24px;
+    height: 75vh;
+
+    .movie-details {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 50px 0;
+        gap: 24px;
+        font-size: 18px;
+
+        .title {
+            font-size: 26px;
+            margin-bottom: 26px;
+            line-height: 24px;
+        }
+
+        .detail-tag, .title {
+            font-weight: 500;
+        }
+    }
+
+    .img-container {
+        box-shadow: 0 0 25px $accent;
+        border-radius: 5px;
+        width: 300px;
+        height: 450px;
+        background: url('https://dunlite.com.au/wp-content/uploads/2019/04/placeholder.jpg') no-repeat center;        
+        background-size: cover;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="header">
+    <button mat-mini-fab color="accent" aria-label="menu icon" (click)="toggleSideNavClick()">
+        @if(isOpen) {
+            <mat-icon>chevron_left</mat-icon>
+        } @else {
+            <mat-icon>menu</mat-icon>
+        }
+    </button>
+    <img src="../../../assets/images/logo-icon.svg" alt="logo" class="logo">
+    {{appHeaderLabels.title}}
+</div>

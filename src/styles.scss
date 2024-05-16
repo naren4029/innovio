@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/colors';
+@import './assets/styles/theme';
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;  
+    background-color: $app-background;
+    color: $white;
+}
+
+::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: $app-background;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: $accent;	
+    border-radius: 10px;
+}
+
+::selection {
+    color: $app-background;
+    background: $accent;
+}
+
+.align-icon-text {
+    vertical-align: text-bottom;
+    margin-left: 5px;
+    line-height: 28px;
+}
+
+.nav-list {
+    .nav-link.nav-active {
+        mat-icon, span{
+            color: $primary;
+        }
+    }
+}
+
+.paginator {
+    &.mat-mdc-paginator {
+        background: $app-background;
+        position: fixed;
+        bottom: 40px;
+        right: 8px;
+        width: 99%;
+    }
+}

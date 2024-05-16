@@ -1,0 +1,8 @@
+<mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer class="drawer-sidenav" mode="side" opened={{isOpen}}>
+      <ng-content select="[Menu]"></ng-content>
+    </mat-drawer>
+    <mat-drawer-content class="drawer-content">
+      <ng-content select="[Container]"></ng-content>
+    </mat-drawer-content>
+</mat-drawer-container>
